@@ -3,6 +3,10 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <Features>strict</Features>
+    <Version>0.0.1</Version>
+    <PackageProjectUrl>https://github.com/JanneMattila/xo</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JanneMattila/xo</RepositoryUrl>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
