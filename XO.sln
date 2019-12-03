@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{2865682A-EC74-468E-B6D0-3C7850E78284}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{763A9046-ADE5-44C5-A37C-0E188F03D1F4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F2E0E7E5-D34D-4E07-93D7-51F35996A8FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XO", "src\XO\XO.csproj", "{0BD8077D-FCBC-4893-9C17-A1CE22F67A68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{6ED71237-DFF7-45DF-B23B-AFFD127D9C2F}"
+	ProjectSection(SolutionItems) = preProject
+		doc\plan.md = doc\plan.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0BD8077D-FCBC-4893-9C17-A1CE22F67A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BD8077D-FCBC-4893-9C17-A1CE22F67A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BD8077D-FCBC-4893-9C17-A1CE22F67A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BD8077D-FCBC-4893-9C17-A1CE22F67A68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0BD8077D-FCBC-4893-9C17-A1CE22F67A68} = {763A9046-ADE5-44C5-A37C-0E188F03D1F4}
+		{6ED71237-DFF7-45DF-B23B-AFFD127D9C2F} = {2865682A-EC74-468E-B6D0-3C7850E78284}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CA950145-4480-4C64-AC93-8E7B4A65A45A}
+	EndGlobalSection
+EndGlobal
