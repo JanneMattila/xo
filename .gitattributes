@@ -1,0 +1,21 @@
+# Normalize text files to LF in the repository and working tree.
+* text=auto eol=lf
+
+# Use Git's built-in C# diff driver.
+*.cs diff=csharp
+
+# Treat compiled files, archives, and media as binary.
+*.dll binary
+*.exe binary
+*.pdb binary
+*.snk binary
+*.nupkg binary
+*.zip binary
+*.7z binary
+*.gz binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
