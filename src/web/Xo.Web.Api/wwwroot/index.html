@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#173f34">
+  <title>XO</title>
+  <link rel="stylesheet" href="/styles.css?v=collapsible-setup-1">
+</head>
+<body>
+  <header class="app-header">
+    <a class="brand" href="#play" aria-label="XO home">XO</a>
+    <nav class="view-tabs" aria-label="Application views">
+      <button class="tab is-active" data-view="play" type="button">Play</button>
+      <button class="tab" data-view="arena" type="button">Arena</button>
+      <button class="tab" data-view="archive" type="button">Archive</button>
+    </nav>
+    <div class="connection" id="connection-status" aria-live="polite">Connecting</div>
+  </header>
+
+  <main>
+    <section class="view is-active" id="view-play" aria-labelledby="play-title">
+      <div class="section-heading">
+        <div class="game-status" id="human-status" aria-live="polite">Start a game</div>
+      </div>
+
+      <div class="play-layout">
+        <details class="setup-panel" id="human-setup" open>
+          <summary>Game setup &amp; statistics</summary>
+          <div class="control-panel">
+          <label for="human-ai">Opponent</label>
+          <select id="human-ai"></select>
+
+          <fieldset>
+            <legend>Your stone</legend>
+            <div class="segmented">
+              <label><input type="radio" name="human-mark" value="X" checked><span>X · First</span></label>
+              <label><input type="radio" name="human-mark" value="O"><span>O · Second</span></label>
+            </div>
+          </fieldset>
+
+          <button class="primary-command" id="new-human-game" type="button">New game</button>
+
+            <dl class="game-facts">
+              <div><dt>Turn</dt><dd id="human-turn">—</dd></div>
+              <div><dt>Moves</dt><dd id="human-move-count">0</dd></div>
+              <div><dt>X think</dt><dd id="human-x-time">0.0s</dd></div>
+              <div><dt>O think</dt><dd id="human-o-time">0.0s</dd></div>
+              <div><dt>Board</dt><dd>20 × 20</dd></div>
+            </dl>
+          </div>
+        </details>
+
+        <div class="board-stage">
+          <canvas class="board" id="human-board" role="img" aria-label="XO game board" tabindex="0"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-arena" aria-labelledby="arena-title" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">AI vs AI</p>
+          <h1 id="arena-title">Arena runs</h1>
+        </div>
+        <div class="game-status" id="run-status" aria-live="polite">Idle</div>
+      </div>
+
+      <div class="arena-layout">
+        <form class="control-panel arena-controls" id="arena-form">
+          <label for="player1">Player 1</label>
+          <select id="player1"></select>
+          <label for="player2">Player 2</label>
+          <select id="player2"></select>
+          <label for="arena-games">Games</label>
+          <input id="arena-games" type="number" min="1" max="10000" value="10">
+          <label for="arena-opening-set">Opening set</label>
+          <select id="arena-opening-set">
+            <option value="standard">Standard opening</option>
+            <option value="varied">Varied paired openings (12 games per cycle)</option>
+          </select>
+          <label class="check-control"><input id="alternate-sides" type="checkbox" checked><span>Alternate sides</span></label>
+          <button class="primary-command" type="submit">Run games</button>
+        </form>
+
+        <div class="results-surface">
+          <div class="progress-track" aria-hidden="true"><div id="run-progress"></div></div>
+          <details class="statistics-panel" id="arena-statistics" open>
+            <summary>Statistics</summary>
+            <div class="stat-grid">
+              <div><span>Complete</span><strong id="stat-games">0</strong></div>
+              <div><span>Player 1</span><strong id="stat-player1">0</strong></div>
+              <div><span>Player 2</span><strong id="stat-player2">0</strong></div>
+              <div><span>Draws</span><strong id="stat-draws">0</strong></div>
+              <div><span>Moves</span><strong id="stat-moves">0</strong></div>
+              <div><span>Games / sec</span><strong id="stat-rate">0.00</strong></div>
+            </div>
+          </details>
+          <p class="run-error" id="run-error" role="alert"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" id="view-archive" aria-labelledby="archive-title" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Last 100 games</p>
+          <h1 id="archive-title">Game archive</h1>
+        </div>
+        <div class="game-status" id="replay-status" aria-live="polite">No game selected</div>
+      </div>
+
+      <div class="archive-layout">
+        <div class="history-list" id="history-list" role="listbox" aria-label="Completed games"></div>
+        <div class="replay-stage">
+          <div class="replay-toolbar">
+            <span id="replay-players">—</span>
+            <div class="think-times" aria-label="Think times">
+              <span>X <strong id="replay-x-time">0.0s</strong></span>
+              <span>O <strong id="replay-o-time">0.0s</strong></span>
+            </div>
+            <strong id="replay-step">0 / 0</strong>
+          </div>
+          <canvas class="board" id="replay-board" role="img" aria-label="Game replay board" tabindex="0"></canvas>
+          <input class="replay-slider" id="replay-slider" type="range" min="0" max="0" value="0" aria-label="Replay move">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/app.js?v=collapsible-setup-1"></script>
+</body>
+</html>

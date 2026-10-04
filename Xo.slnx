@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/src/ai/">
+    <Project Path="src/ai/Xo.Ai.AdvancedV1/Xo.Ai.AdvancedV1.csproj" />
+    <Project Path="src/ai/Xo.Ai.AdvancedV2/Xo.Ai.AdvancedV2.csproj" />
+    <Project Path="src/ai/Xo.Ai.AdvancedV3/Xo.Ai.AdvancedV3.csproj" />
+    <Project Path="src/ai/Xo.Ai.AdvancedV4/Xo.Ai.AdvancedV4.csproj" />
+    <Project Path="src/ai/Xo.Ai.AdvancedV5/Xo.Ai.AdvancedV5.csproj" />
+    <Project Path="src/ai/Xo.Ai.AdvancedV6/Xo.Ai.AdvancedV6.csproj" />
+  </Folder>
+  <Folder Name="/src/shared/">
+    <Project Path="src/shared/Xo.Domain/Xo.Domain.csproj" />
+    <Project Path="src/shared/Xo.Ai.Abstractions/Xo.Ai.Abstractions.csproj" />
+    <Project Path="src/shared/Xo.Ai.Hosting/Xo.Ai.Hosting.csproj" />
+    <Project Path="src/shared/Xo.MatchRunner/Xo.MatchRunner.csproj" />
+  </Folder>
+  <Folder Name="/src/web/">
+    <Project Path="src/web/Xo.Web.Api/Xo.Web.Api.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Xo.Verification/Xo.Verification.csproj" />
+  </Folder>
+</Solution>

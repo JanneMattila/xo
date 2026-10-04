@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\shared\Xo.Domain\Xo.Domain.csproj" />
+    <ProjectReference Include="..\..\src\shared\Xo.Ai.Hosting\Xo.Ai.Hosting.csproj" />
+    <ProjectReference Include="..\..\src\shared\Xo.MatchRunner\Xo.MatchRunner.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

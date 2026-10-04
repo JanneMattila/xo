@@ -7,3 +7,4 @@
 /**/bin/
 /.sonarqube/
 /**/BenchmarkDotNet.Artifacts
+**/.playwright-mcp/
